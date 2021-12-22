@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScoreBoardActivity"
+    android:background="@color/gray">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Facile"
+        android:layout_margin="15dp"
+        android:id="@+id/btn_facile"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf = "parent"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Moyen"
+        android:layout_margin="15dp"
+        android:id="@+id/btn_moyen"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf = "parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Difficile"
+        android:layout_margin="15dp"
+        android:id="@+id/btn_difficile"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="70dp"
+        android:id="@+id/recycler_view"
+        app:layout_constraintTop_toBottomOf="@id/btn_moyen"
+        app:layout_constraintBottom_toTopOf="@id/btn_delete"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btn_delete"
+        android:text="Supprimer les scores :"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:layout_marginVertical="20dp"/>
+
+    <Button
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:background="@drawable/ic_baseline_delete_24"
+        android:id="@+id/btn_delete"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
